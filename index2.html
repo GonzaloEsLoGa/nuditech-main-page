@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuditech | Upgrading Human Potential</title>
+    <meta name="description" content="Welcome to a new era of human performance management. Continuous biosensing and real-time biological data processing.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Three.js library for 3D dynamic background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+</head>
+
+<body class="page-layout">
+
+    <!-- 3D DYNAMIC CANVAS -->
+    <div id="bg-canvas-container" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; background:#030712;">
+        <canvas id="wave-canvas"></canvas>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            
+            <a href="#home" class="logo-wrapper">
+                <img src="images/logos-nudi-purple.svg" alt="Nuditech logo" class="logo-image" onerror="this.src='https://placehold.co/32x32/6366f1/ffffff?text=N'">
+                <span class="logo-text">
+                    Nuditech<span class="text-accent">.</span>
+                </span>
+            </a>
+
+            <!-- Right Header Group (Desktop Nav + Hamburger Menu) -->
+            <div class="right-header-group">
+                <nav class="desktop-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#why-now" class="nav-link">Why Now</a>
+                    <a href="https://www.nuditech.com/polar-h10-data-reader/" target="_blank" rel="noopener noreferrer" class="nav-link">Polar H10 BLE Reader</a>
+                    <a href="#applications" class="nav-link">Applications</a>
+                    <a href="#stage" class="nav-link">Current Stage</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Hamburger Button -->
+                <button id="menu-toggle-btn" 
+                        type="button"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                        aria-controls="drawer-panel"
+                        class="menu-toggle-btn">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu-wrapper" class="mobile-menu-wrapper">
+        <div id="menu-backdrop" class="drawer-backdrop"></div>
+
+        <aside id="drawer-panel" class="drawer-panel">
+            <div>
+                <div class="drawer-header">
+                    <div class="drawer-title-group">
+                        <div class="icon-badge">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="drawer-title">Nuditech</span>
+                    </div>
+
+                    <button id="menu-close-btn" type="button" aria-label="Close menu" class="menu-close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <nav id="menu-items-container" class="menu-items-container">
+                    <a href="#home" class="menu-item">
+                        <span class="menu-item-icon"><i class="fa-solid fa-house"></i></span>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="#why-now" class="menu-item">
+                        <span class="menu-item-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                        <span>Why Now</span>
+                    </a>
+
+                    <a href="https://www.nuditech.com/polar-h10-data-reader/" target="_blank" rel="noopener noreferrer" class="menu-item">
+                        <span class="menu-item-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                        <span>Polar H10 BLE Reader</span>
+                    </a>
+
+                    <a href="#applications" class="menu-item">
+                        <span class="menu-item-icon"><i class="fa-solid fa-layer-group"></i></span>
+                        <span>Applications</span>
+                    </a>
+
+                    <a href="#stage" class="menu-item">
+                        <span class="menu-item-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        <span>Current Stage</span>
+                    </a>
+
+                    <a href="#contact" class="menu-item">
+                        <span class="menu-item-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+    </div>
+
+    <main class="main-content" id="home">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section reveal-on-scroll">
+            <h1 class="hero-title">
+                Welcome to a new era of <span class="gradient-text">human performance management</span>
+            </h1>
+        </section>
+
+        <!-- WHY NOW SECTION -->
+        <section class="content-section reveal-on-scroll" id="why-now">
+            <div class="section-header">
+                <div class="section-label">Context & Evolution</div>
+                <h2 class="section-title">Why Now</h2>
+            </div>
+            <p class="section-body">
+                For decades, human physiology has been measured in isolated snapshots, far from real life. Today, the revolutions converge in continuous biosensing and real-time data processing. To living biological data.
+            </p>
+        </section>
+
+        <!-- APPLICATIONS SECTION -->
+        <section class="content-section reveal-on-scroll" id="applications">
+            <div class="section-header">
+                <div class="section-label">Pillars</div>
+                <h2 class="section-title">Applications</h2>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="app-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="card-title">Performance</h3>
+                    <p class="card-description">
+                        Optimizing human output, physiological efficiency, and real-time athletic and cognitive capacity.
+                    </p>
+                </div>
+
+                <div class="app-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="card-title">Resilience</h3>
+                    <p class="card-description">
+                        Continuous monitoring to mitigate strain, prevent burnout, accelerate recovery, and sustain adaptive stamina.
+                    </p>
+                </div>
+
+                <div class="app-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="card-title">Research</h3>
+                    <p class="card-description">
+                        Unlocking deep physiological insights through continuous, high-fidelity biological data streams.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAGE SECTION -->
+        <section class="content-section reveal-on-scroll" id="stage">
+            <div class="section-header">
+                <div class="section-label">Roadmap</div>
+                <h2 class="section-title">Stage</h2>
+            </div>
+            <p class="section-body">
+                Currently in development. Early access will be opened for:
+            </p>
+            <ul class="stage-list">
+                <li class="stage-item">
+                    <i class="fa-solid fa-chevron-right stage-item-icon"></i>
+                    <span>Strategic partners</span>
+                </li>
+                <li class="stage-item">
+                    <i class="fa-solid fa-chevron-right stage-item-icon"></i>
+                    <span>Research collaborations</span>
+                </li>
+                <li class="stage-item">
+                    <i class="fa-solid fa-chevron-right stage-item-icon"></i>
+                    <span>Pilot performance programs</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CALL TO ACTION BOX -->
+        <section class="cta-box reveal-on-scroll">
+            <h2 class="cta-title">Join the Journey</h2>
+            <p class="cta-description">
+                We are selectively connecting with research institutions, high-performance environments and vision-aligned partners. If you are interested in early access, collaboration or investment, we would like to hear from you.
+            </p>
+            <div class="cta-buttons-group">
+                <a href="mailto:info@nuditech.com?subject=Partnership%20Inquiry" class="btn-primary">
+                    <i class="fa-solid fa-handshake"></i>
+                    <span>Partnerships</span>
+                </a>
+                <a href="mailto:info@nuditech.com?subject=Investor%20Inquiry" class="btn-secondary">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Investors</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">Nuditech.</div>
+                <p style="color: var(--text-secondary); font-size: 0.9375rem;">Upgrading human potential.</p>
+            </div>
+
+            <div class="footer-info">
+                <a href="mailto:info@nuditech.com" class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@nuditech.com</span>
+                </a>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Avenida Italia 850, Of 29, Santiago, Chile</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; Nuditech. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- EXTERNAL JS SCRIPT FOR 3D BACKGROUND -->
+    <script src="scripts/background.js" defer></script>
+
+    <script src="scripts/menu-desplegable.js" defer></script>
+</body>
+</html>
